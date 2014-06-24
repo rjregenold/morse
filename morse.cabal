@@ -1,0 +1,30 @@
+name:                morse
+version:             0.1.0.0
+synopsis:            A morse code encoder/decoder.
+license:             MIT
+license-file:        LICENSE
+author:              RJ Regenold
+maintainer:          rjregenold@gmail.com
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable morse
+  main-is:          Main.hs
+  hs-source-dirs:   src
+  default-language: Haskell2010
+  ghc-options:      -Wall -fno-warn-orphans -O2 -threaded
+  
+  build-depends: base                      >= 4.6     && < 4.7
+               , optparse-applicative      >= 0.9.0   && < 1.0
+               , scotty                    >= 0.8.1   && < 0.9
+               , blaze-html                >= 0.7.0.2 && < 0.8
+               , wai-extra                 >= 3.0.0.1 && < 3.1
+
+               , split
+               , text
+               , blaze-markup
+               , wai-middleware-static
+               , bytestring
+               , http-types
+               , wai
+               , aeson
